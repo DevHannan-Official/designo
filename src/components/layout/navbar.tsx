@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Monitor } from "lucide-react";
 import { ThemeButton } from "../utils/theme-btn";
 
 const Navbar = () => {
@@ -13,15 +11,15 @@ const Navbar = () => {
     { name: "Features", href: "/features" },
   ];
   return (
-    <nav className="flex items-center justify-between py-4 px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">
+    <nav className="flex items-center justify-between py-4 px-4 sm:px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">
       <Link href={"/"} className="flex items-center gap-2">
         <span className="text-2xl font-special text-primary dark:text-indigo-400">
           Designo
         </span>
       </Link>
-      <ul>
+      <ul className="hidden md:flex items-center gap-6">
         {navItems.map((item) => (
-          <li key={item.name} className="inline-block mr-6">
+          <li key={item.name} className="inline-block">
             <Link
               href={item.href}
               className=" hover:text-foreground/80 transition-colors"
