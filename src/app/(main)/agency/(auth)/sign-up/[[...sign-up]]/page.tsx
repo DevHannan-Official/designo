@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import * as Clerk from "@clerk/elements/common";
 import * as SignUp from "@clerk/elements/sign-up";
 import { Loader } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -16,23 +15,15 @@ const SignUpPage = () => {
           <>
             <SignUp.Step
               name="start"
-              className=" space-y-6 rounded-2xl bg-white p-6 ring-1 ring-inset ring-white/5 w-full max-w-sm"
+              className=" space-y-6 rounded-2xl bg-accent p-6 ring-1 ring-inset ring-white/5 w-full max-w-sm"
             >
               <header className="text-center">
-                <Image
-                  src={"/images/logo.png"}
-                  alt="Designo Logo"
-                  width={50}
-                  height={50}
-                  className="mx-auto mb-4"
-                />
                 <h1 className="mt-4 text-2xl font-medium tracking-tight">
-                  Sign up
+                  Get Started
                 </h1>
 
                 <p className="mt-2 text-sm text-muted-foreground">
-                  To create account for{" "}
-                  <span className="text-primary font-special">Designo</span>{" "}
+                  Create your account
                 </p>
               </header>
               <div className="space-y-3">

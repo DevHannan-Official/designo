@@ -15,7 +15,6 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-4 px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">
       <Link href={"/"} className="flex items-center gap-2">
-        <Image src={"/images/logo.png"} alt="Logo" width={40} height={40} />
         <span className="text-2xl font-special text-primary dark:text-indigo-400">
           Designo
         </span>
@@ -34,7 +33,9 @@ const Navbar = () => {
       </ul>
       <section className="flex items-center gap-2">
         <ThemeButton />
-        <Button>Login</Button>
+        <Link href="/agency/sign-in">
+          <Button>Get Started</Button>
+        </Link>
       </section>
     </nav>
   );
