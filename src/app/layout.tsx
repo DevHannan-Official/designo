@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Righteous, Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const righteous = Righteous({
   variable: "--font-righteous",
@@ -101,10 +103,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${righteous.variable} ${inter.variable}  antialiased`}>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
+      <html lang="en">
+        <body
+          className={`${righteous.variable} ${inter.variable}  antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
