@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "Home", href: "/site" },
     { name: "About", href: "/site#about" },
     { name: "Pricing", href: "/site#pricing" },
-    { name: "Faqs", href: "/site#docs" },
+    { name: "Faqs", href: "/site#faqs" },
   ];
   return (
     <nav className="flex items-center justify-between py-4 px-4 sm:px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">
