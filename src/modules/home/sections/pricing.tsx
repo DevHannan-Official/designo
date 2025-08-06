@@ -58,11 +58,11 @@ const PricingSection = () => {
           you&apos;re not ready to commit you can get started for free.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-4 justify-center items-center place-items-center">
         {plans.map((plan) => (
           <Card
             key={plan.name}
-            className={`relative ${
+            className={`relative w-full max-w-sm overflow-hidden ${
               plan.popular && "border-2 border-indigo-600"
             }`}
           >

@@ -5,10 +5,11 @@ import { ThemeButton } from "../utils/theme-btn";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Pricing", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Documentation", href: "/docs" },
-    { name: "Features", href: "/features" },
+    { name: "Home", href: "/site" },
+    { name: "About", href: "/site#about" },
+    { name: "Pricing", href: "/site#pricing" },
+    { name: "Features", href: "/site#features" },
+    { name: "Faqs", href: "/site#docs" },
   ];
   return (
     <nav className="flex items-center justify-between py-4 px-4 sm:px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">

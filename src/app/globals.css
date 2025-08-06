@@ -88,6 +88,9 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.51 0.23 277);
+
+  scroll-behavior: smooth;
+  color-scheme: light dark;
 }
 
 .dark {
