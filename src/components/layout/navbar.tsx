@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-4 px-4 sm:px-6 bg-background/80 backdrop-blur-md border-b border-zinc-400/20 dark:border-b-zinc-700/20 sticky top-0 z-20">
       <Link href={"/"} className="flex items-center gap-2">
-        <span className="text-2xl font-special text-primary dark:text-indigo-400">
+        <span className="text-3xl font-special text-primary dark:text-indigo-400">
           Designo
         </span>
       </Link>
