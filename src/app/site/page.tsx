@@ -12,13 +12,22 @@ export default function Home() {
         <h2 className="text-primary dark:text-indigo-500 font-special text-6xl sm:text-8xl">
           Designo
         </h2>
-        <Image
-          src="/images/preview.png"
-          alt="Designo Preview"
-          width={1200}
-          height={1200}
-          className="w-full h-auto object-cover relative -top-7  rounded-2xl shadow-lg"
-        />
+        <div className="relative w-full flex items-center justify-center">
+          <Image
+            src="/images/preview.png"
+            alt="Designo Preview"
+            width={1200}
+            height={1200}
+            className="w-full h-auto object-cover relative -top-7  rounded-t-2xl shadow-lg"
+          />
+          <div
+            className="bottom-0 top-[50%] left-0 right-0 absolute z-10"
+            style={{
+              background:
+                "linear-gradient(to top, var(--background), transparent)",
+            }}
+          ></div>
+        </div>
       </div>
     </div>
   );
