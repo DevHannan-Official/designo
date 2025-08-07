@@ -3,7 +3,10 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeButton } from "../utils/theme-btn";
 
-const Navbar = () => {
+type PropTypes = {
+  user?: object;
+};
+const Navbar = ({}: PropTypes) => {
   const navItems = [
     { name: "Home", href: "/site" },
     { name: "About", href: "/site#about" },

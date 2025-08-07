@@ -8,44 +8,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { pricingCards } from "@/lib/data";
 import Link from "next/link";
 import React from "react";
 
 const PricingSection = () => {
-  const plans = [
-    {
-      name: "Starter",
-      description: "Perfect for trying out Designo",
-      popular: false,
-      price: "$0/month",
-      features: ["3 subaccounts", "2 Team members", "Unlimited Pipelines"],
-    },
-    {
-      name: "Pro",
-      description: "For small teams and startups",
-      popular: true,
-      price: "$19/month",
-      features: [
-        "Priority support",
-        "Unlimited subaccounts",
-        "Unlimited team members",
-        "Unlimited pipelines",
-      ],
-    },
-    {
-      name: "Enterprise",
-      popular: false,
-      description: "The ultimate agency kit",
-      price: "$49/month",
-      features: [
-        "Rebilling",
-        "24/7 support",
-        "Unlimited subaccounts",
-        "Unlimited team members",
-        "Unlimited pipelines",
-      ],
-    },
-  ];
   return (
     <section id="pricing" className="mb-10">
       <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-4 py-16 mt-16">
@@ -59,9 +26,10 @@ const PricingSection = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-4 justify-center items-center place-items-center">
-        {plans.map((plan) => (
+        {pricingCards.map((plan) => (
+          // WIP: Wire up free product from Stripe
           <Card
-            key={plan.name}
+            key={plan.priceId}
             className={`relative w-full max-w-sm overflow-hidden ${
               plan.popular && "border-2 border-indigo-600"
             }`}
@@ -73,12 +41,15 @@ const PricingSection = () => {
             )}
             <CardHeader>
               <CardTitle className="text-2xl font-medium">
-                {plan.name}
+                {plan.title}
               </CardTitle>
               <CardDescription>{plan.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold mb-4">{plan.price}</div>
+              <div className="text-3xl font-bold mb-4">
+                {plan.price}
+                {plan.duration && `/${plan.duration}`}
+              </div>
               <ul className="list-disc pl-5 space-y-2">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="text-sm text-muted-foreground">
@@ -88,10 +59,7 @@ const PricingSection = () => {
               </ul>
             </CardContent>
             <CardFooter className="relative bottom-0 flex-1 flex items-end justify-center">
-              <Link
-                href={`/agency/sign-in?plan=${plan.name.toLowerCase()}`}
-                className="w-full"
-              >
+              <Link href={`/agency?plan=${plan.priceId}`} className="w-full">
                 <Button className="w-full">Get Started</Button>
               </Link>
             </CardFooter>
