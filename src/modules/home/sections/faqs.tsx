@@ -9,11 +9,11 @@ import React from "react";
 
 const FaqsSection = () => {
   return (
-    <section id="faqs" className="my-8 sm:my-16 py-4 px-4 sm:px-6">
+    <section id="faqs" className="my-20 md:py-10 px-4 sm:px-6">
       <h2 className="text-3xl sm:text-4xl text-center">
         Frequently Asked Questions
       </h2>
-      <div className="mt-14 sm:mt-16">
+      <div className="mt-8 sm:mt-16">
         <Accordion
           type="single"
           collapsible

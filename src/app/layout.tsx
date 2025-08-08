@@ -1,7 +1,8 @@
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata, Viewport } from "next";
 import { Righteous, Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+import "@/styles/utils.css";
 import React from "react";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";

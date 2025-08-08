@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeButton } from "../utils/theme-btn";
 import { motion } from "motion/react";
 import {
+  ArrowUpRight,
   CircleQuestionMark,
   Home,
   Info,
@@ -24,10 +25,8 @@ const navItems = [
 ];
 
 const MobileNav = ({
-  showMobileNav,
   setShowMobileNav,
 }: {
-  showMobileNav: boolean;
   setShowMobileNav: (show: boolean) => void;
 }) => {
   return (
@@ -77,12 +76,7 @@ const Navbar = ({}: PropTypes) => {
         >
           <Menu />
         </Button>
-        {showMobileNav && (
-          <MobileNav
-            showMobileNav={showMobileNav}
-            setShowMobileNav={setShowMobileNav}
-          />
-        )}
+        {showMobileNav && <MobileNav setShowMobileNav={setShowMobileNav} />}
         <Link href={"/"} className="flex items-center gap-2">
           <span className="text-3xl font-special text-primary dark:text-indigo-400">
             Designo
@@ -104,7 +98,10 @@ const Navbar = ({}: PropTypes) => {
       <aside className="flex items-center gap-2">
         <ThemeButton />
         <Link href="/agency/sign-in">
-          <Button>Get Started</Button>
+          <Button>
+            <ArrowUpRight className="flex xs:hidden" />
+            <span className="hidden xs:flex">Get Started</span>
+          </Button>
         </Link>
       </aside>
     </nav>

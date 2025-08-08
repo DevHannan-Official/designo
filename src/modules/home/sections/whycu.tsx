@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
     },
   ];
   return (
-    <section id="whycu" className="my-16">
+    <section id="whycu" className="my-10 md:py-10">
       <div className="w-full max-w-6xl mx-auto px-4 py-8">
         <h2 className="text-3xl sm:text-4xl text-center mb-8">Why Choose Us</h2>
         <div

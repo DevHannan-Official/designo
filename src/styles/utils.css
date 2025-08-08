@@ -1,0 +1,17 @@
+@media (min-width: 351px) {
+  .xs\:hidden {
+    display: none !important;
+  }
+  .xs\:block {
+    display: block !important;
+  }
+  .xs\:flex {
+    display: flex !important;
+  }
+  .xs\:inline {
+    display: inline !important;
+  }
+  .xs\:inline-block {
+    display: inline-block !important;
+  }
+}
